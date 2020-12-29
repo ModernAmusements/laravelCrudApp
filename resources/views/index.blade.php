@@ -8,8 +8,12 @@
                 <div class="card-header">{{ __('Home') }}</div>
 
                 <div class="card-body">
-                    Home
+                    <h2>Add New Hobby</h2>
                 </div>
+                <a class="btn btn-success btn-sm mt-3" href="/hobby/create">
+                    <i class="fas fa-plus-circle"></i>
+                        New Hobby
+                </a>
             </div>
         </div>
     </div>

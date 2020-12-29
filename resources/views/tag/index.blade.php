@@ -6,21 +6,19 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    All Hobbies
+                    All Tag´s
                 </div>
 
                 <div class="card-body">
                     <ul class="list-group">
-                        @foreach($hobbies as $hobby)
+                        @foreach($tags as $tag)
                         <li class="list-group-item">
-                            {{ $hobby->name }}
-                            <a class="ml-2" href="/hobby/{{ $hobby->id }}">
-                                See More
-                            </a>
-                            <a class="ml-2 btn btn-sm btn-outline-primary" href="/hobby/{{ $hobby->id }}/edit">
+                            <span style="font-size: 130%;" class="mr-2 badge badge-{{ $tag->style }}">{{ $tag->name }}</span>
+
+                            <a class="ml-2 btn btn-sm btn-outline-primary" href="/tag/{{ $tag->id }}/edit">
                                 Edit
                             </a>
-                            <form action="/hobby/{{ $hobby->id }}"
+                            <form action="/tag/{{ $tag->id }}"
                                   method="POST"
                                   style="display: inline;"
                             >
@@ -31,9 +29,9 @@
                         </li>
                         @endforeach
                     </ul>
-                    <a class="btn btn-success btn-sm mt-3" href="/hobby/create">
-                        <i class="fas fa-plus-circle"></i>
-                            New Hobby
+                    <a class="btn btn-success btn-sm mt-3" href="/tag/create">
+
+                            New Tag
                     </a>
                 </div>
             </div>
